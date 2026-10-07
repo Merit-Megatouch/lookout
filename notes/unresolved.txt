@@ -1,0 +1,45 @@
+# Symbols no library, runtime or megatouch-host provides (2026-10-07)
+# megatouch-host loads the game with RTLD_NOW, so each of these must be defined
+# (usually in src/host/loader_services.cpp) before the game will start.
+# symbol | needed by
+RankFunc | lookout.so
+ScreenIsTouched() | lookout.so
+QueFlush(bool) | lookout.so
+VideoClass::Line(int, int, int, int) | lookout.so
+VideoClass::GetPixel(int, int) | lookout.so
+VideoClass::SetPixel(unsigned short, unsigned short, int, int, int) | lookout.so
+xml_gameinfo::enum_GameIds_tag(xml_gameinfo::GameIds, bool) | libcontent.so
+ChainRestClass::GetPicFileName(xml_gameinfo::GameIds, int) | lookout.so
+xml_gamerandom::PICRAND_record::PICRAND_record() | lookout.so
+xml_gamerandom::PICRAND_record::~PICRAND_record() | lookout.so
+xml_gamerandom::PICRAND_record::operator=(xml_gamerandom::PICRAND_record const&) | lookout.so
+RandomizedArrayClass::SetBookMark(unsigned char) | lookout.so
+RandomizedArrayClass::GetNextValue(int) | lookout.so
+RandomizedArrayClass::GotoBookMark(unsigned char) | lookout.so
+RandomizedArrayClass::RandomizedArrayClass(xml_gamerandom::PICRAND_record*, int, unsigned char, unsigned short*) | lookout.so
+RandomizedArrayClass::~RandomizedArrayClass() | lookout.so
+USBIO::ReadJoystick(short*, short*, unsigned char*, short, short, unsigned char*) | lookout.so
+USBIO::JoystickFound() | lookout.so
+Bitmap::CopyFromScreen(int, int, bool) | lookout.so
+Bitmap::CreateSmackTextBox(char const*, FontBase*, signed char, unsigned short, unsigned short, bool) | lookout.so
+Bitmap::CreateColoredTextBoxTTFS(char const*, int, int, int, int, int, int, int, int, int, bool, char*, int) | lookout.so
+Bitmap::LoadJPEG(char*, int, int, unsigned char) | lookout.so
+Settings::Init() | libcontent.so
+Settings::Init() | lookout.so
+Settings::Load() | libcontent.so
+Settings::Load() | lookout.so
+Settings::Cleanup() | libcontent.so
+Settings::Cleanup() | lookout.so
+Settings::Restore(abstract_xml_record const*) | libcontent.so
+Settings::Restore(abstract_xml_record const*) | lookout.so
+Settings::SaveNow() | libcontent.so
+Settings::Settings(char const*, unsigned int) | libcontent.so
+Settings::Settings(char const*, unsigned int) | lookout.so
+Settings::~Settings() | libcontent.so
+Settings::~Settings() | lookout.so
+xml_gamerandom::PICRAND_record::operator!=(xml_gamerandom::PICRAND_record const&) const | lookout.so
+Settings::Key(unsigned int, bool) const | libcontent.so
+Settings::Key(unsigned int, bool) const | lookout.so
+typeinfo for Settings | libcontent.so
+typeinfo for Settings | lookout.so
+typeinfo for xml_gamerandom::PICRAND_record | lookout.so
